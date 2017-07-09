@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Member Access</h1>
+        
+        <script>            
+            
+            var Cleo = {
+                
+                species: "feline",
+                age: 1,
+                gender: "female",
+                color: "white",
+                eyes: {
+                    number: 2,
+                    color: "yellow",
+                    pupils: "contracted",
+                },
+                ears: [ 
+                    {right:"operated"}, 
+                    {left:"intact"} 
+                ],
+                eats: function ()
+                    {return "catfood";}
+            }
+            
+            console.log (Cleo);
+            console.log (Cleo.species);
+            console.log (Cleo.eyes.color);
+            console.log (Cleo.ears);
+            console.log (Cleo.eats);
+            console.log (Cleo.eats ());
+            
+        </script> 
+        
+    </body>
+</html>
