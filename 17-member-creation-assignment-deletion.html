@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Member creation, assignment and deletion</h1>
+        
+        <script>            
+            
+            var Cleo = {
+                
+                species: "feline",
+                age: 1,
+                gender: "female",
+                color: "white",
+                eyes: {
+                    number: 2,
+                    color: "yellow",
+                    pupils: "contracted",
+                },
+                ears: [ 
+                    {right:"operated"}, 
+                    {left:"intact"} 
+                ],
+                eats: function ()
+                    {return "catfood";}
+            }
+            
+            console.log (Cleo);
+            
+            var Cleo ="White cat";
+            
+            console.log(Cleo);
+            
+            var Cleo = {
+                
+                species: "feline",
+                age: 1,
+                gender: "female",
+                color: "white",
+                eyes: {
+                    number: 2,
+                    color: "yellow",
+                    pupils: "contracted",
+                },
+                ears: [ 
+                    {right:"operated"}, 
+                    {left:"intact"} 
+                ],
+                eats: function ()
+                    {return "catfood";}
+            }
+            
+            Cleo.age = 2;
+            console.log (Cleo.age);
+            console.log (Cleo.age + 10);
+            console.log (Cleo["age"] -1);
+            
+            Cleo.eats ="sardine";
+            
+            console.log(Cleo ["eats"]);
+            
+            Cleo.whiskers = "white";
+            
+            console.log (Cleo);
+            
+            Cleo.bites = function ()
+            {return "Sushi";}
+            
+            console.log (Cleo);
+            console.log (Cleo.bites());
+            
+            delete Cleo.bites;            
+            console.log (Cleo);
+                            
+        </script> 
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Member creation, assignment and deletion</h1>
+        
+        <script>            
+             
+            var Yuki = [
+                
+                "cat",
+                11,
+                [ 
+                    "adopted",
+                    "neutered",                 
+                ],
+                {   whiskers: "black",
+                    eyes: "yellow",
+                    color: "black",
+                },
+                [
+                    {eats: "catfood"},
+                    {drinks: "water"}                    
+                ],
+                function () {
+                    return "sleeps";
+                }
+                    
+            ]
+             
+            Yuki [0] = "black cat";
+            console.log (Yuki);
+            
+            Yuki [7] = {likes: "nobody"};
+            
+            console.log (Yuki[7]["likes"]);
+            console.log ("She's a beautiful " + Yuki [0]);
+            console.log ("But she likes " + Yuki[7]["likes"]);            
+            
+            console.log (Yuki.shift()); //retira o priemiro elemento da array
+            console.log (Yuki.pop()); // retira o último """
+            console.log (Yuki.unshift("Kitty")); // adiciona elemento ao início da array
+            console.log (Yuki.push ("I love her", 2 + " much")); // adiciona elementos ao final da array
+            console.log (Yuki.splice (2,2)); // na posição 2, deleta 2 elementos
+            console.log (Yuki.splice (2,0, "adopted")); // na posição 2, não deleta nada, adiciona adopted
+            console.log (Yuki.splice (2,1, "neutered")); // na posição 2, deletou 1 elemento e substituiu por neutered
+        </script> 
+        
+    </body>
+</html>
