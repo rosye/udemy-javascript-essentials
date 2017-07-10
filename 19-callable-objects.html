@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Javascript Essentials</h1>
+        
+        <script>            
+            
+            function gata1 (){
+                
+                var nomecompleto = "Yuki Fuzzball";
+                
+                return nomecompleto;
+                
+            }
+        console.log(gata1());
+            
+               
+             function gata2 (){
+                 
+                 var nomecompleto = "Sushi Fuzzball";
+
+                 function titulo (gata2){
+                    
+                    return "Princess " + gata2;
+                }
+                
+                return titulo (nomecompleto);                
+            }
+        console.log (gata2());
+            
+            
+            function gata3 (){
+                
+                var nomecompleto = {primeiro:"Cleonora", ultimo:" Fuzzball"};
+                
+                return nomecompleto.primeiro + nomecompleto.ultimo;  
+                
+            }
+        console.log (gata3());
+            
+            
+            function humana (nomecompleto)
+            
+            {
+                return nomecompleto.primeiro + nomecompleto.ultimo;                
+            }
+                       
+            console.log (
+                humana({primeiro:"Rosana", ultimo:" B. Silva"})
+            );
+                 
+         
+        function bichos (especie)
+            {
+                return especie();
+            }
+            
+            console.log (
+                bichos (function() {return "gatos";})
+            
+            );
+            
+            
+        </script> 
+        
+    </body>
+</html>
