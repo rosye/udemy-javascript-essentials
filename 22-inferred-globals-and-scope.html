@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Inferred Globals and Scope</h1>
+        
+        <script>            
+            
+            var cat = {
+                name: "Cleo",
+                about:{
+                    fur:[
+                        "white",
+                        "short"
+                    ] 
+                }
+            };
+            
+            function runExpression (){
+                var a=10;
+                function add()
+                {
+                    var cat = "Sushi";
+                    console.log(cat);
+                    console.log(a);
+                }
+                
+              return add();
+            } 
+            
+            console.log(runExpression());
+            console.log(cat);
+                        
+            
+/////////////////////////////////////////////            
+                        
+            var cat2 = {
+                name: "Sushi",
+                about:{
+                    fur:[
+                        "calico",
+                        "long"
+                    ] 
+                }
+            };
+            
+            function runExpression2 (){
+                function add()
+                {
+                    cat2 = "Yuki";
+                    console.log(cat2);
+                }
+                
+              return add();
+            } 
+            
+            console.log(runExpression2());
+            console.log(cat2); 
+                        
+            
+/////////////////////////////////////////////            
+                        
+            function runExpression3 (){
+                function add()
+                {
+                    favpolish="blue" /*clobbering the global scope - unnecessarily creating a global symbol */
+                }
+                
+              return add();
+            } 
+            
+            console.log(runExpression3());
+            
+        </script> 
+        
+    </body>
+</html>

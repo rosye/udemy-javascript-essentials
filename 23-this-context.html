@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>This Context</h1>
+        
+        <script>            
+            console.log (this);
+            
+            var object = {
+                
+                prop:this,
+                method: function() {return this;}                
+            };
+            
+            console.log (object); //this in a object - returns window - returns window
+            console.log (object.method()); // this in a method - callable object - steps out one scope
+            
+            var array = [
+                this,
+                function() {return this;}                
+            ];
+            
+            console.log(array); //this in an array - returns window - returns window
+            console.log (array[1]()); // this in a function - callable object - steps out one scope
+            
+            function global (){
+                
+                return this;
+            }
+            
+            console.log(global()); // this in a globally scoped function - callable object - returns window
+            
+            global.call (object); // invoking an object through a function
+            
+            new global();
+            
+            console.log (new global); // new gives a new this context - blank - to a function            
+            
+        </script> 
+        
+    </body>
+</html>

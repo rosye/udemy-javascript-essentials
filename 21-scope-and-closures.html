@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Scope and Closures</h1>
+        
+        <script>            
+            
+            var cat = {
+                name: "Cleo",
+                about:{
+                    fur:[
+                        "white",
+                        "short"
+                    ] 
+                }
+            }
+            
+            console.log (cat[0]);
+            console.log(cat.about.fur[0]);
+            
+            function runExpression (){
+                
+                var a=10;
+                
+                function add (){
+                    var b=100;
+                    
+                    return a + 90; 
+                    /*return a + b;*/               
+                } 
+                
+              return add();
+            }    
+            
+            console.log(runExpression());  
+            
+        </script> 
+        
+    </body>
+</html>
