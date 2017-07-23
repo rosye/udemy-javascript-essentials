@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Constructors with prototype</h1>
+        
+        <script>            
+            function ConstructCat(){
+
+                this.color="white" // creating global variables in Window object - BAD
+                this.eyes="yellow"
+                this.legs=4    
+                
+                console.log(this);
+            }
+            
+            ConstructCat.prototype ={
+                pet: function() {return "pet that cat";},
+                feed: function() {return "feed it";},
+                play: function() {return "play ball with it";}            
+            }
+            
+                var cat = ConstructCat(); // no context - it points to the Window object
+            
+                var cat = new ConstructCat(); // new gives context to this - points to an empty object and estabilishes the prototype link
+                var cat2 = new ConstructCat(); 
+                var cat3 = new ConstructCat(); 
+            
+                cat.color = "black";
+            
+                console.log (cat);
+                console.log (cat2);
+                console.log (cat3);
+            
+                console.log (ConstructCat.prototype);
+            
+                ConstructCat.prototype.talk="hello cat"; //added talk property to Constructcat object
+            
+                console.log (cat.talk);
+                console.log (cat2.talk);
+                console.log (cat3.talk);
+            
+            
+            ///////////////////////////////////////////////
+            
+                        
+            function ConstructCat2(name,color,eyes){
+
+                this.name= name; 
+                this.color= color;
+                this.eyes= eyes;
+                                
+                console.log(this);
+            }
+            
+            ConstructCat2.prototype ={
+                pet: function() {return "pet that cat";},
+                feed: function() {return "feed it";},
+                play: function() {return "play ball with it";}            
+            }
+            
+                var cat = new ConstructCat2("Cleo","white","yellow");
+                var cat2 = new ConstructCat2("Sushi","calico","yellowish"); 
+                var cat3 = new ConstructCat2("Yuki","black","greenish"); 
+           
+        </script> 
+        
+    </body>
+</html>
