@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Prototype</h1>
+        
+        <script>            
+            
+            var Sushi = {name:"Sushi",color:"calico",eyes:"yellow",age:3};
+            
+            console.log (Sushi);
+            console.log(Sushi.__proto__);            
+            Sushi.__proto__.says="miau";            
+            console.log ("Sushi says " + Sushi.says);
+            
+            var Cleo = {name:"Cleo",color:"white"};            
+            console.log (Cleo);
+            console.log ("Cleo also says " + Cleo.says);
+            
+            var Sushi = {says: "hiss"};
+            console.log("Sushi now says " + Sushi.says);
+            console.log("Cleo still says " + Cleo.says);
+            
+            var pets = [];
+            console.log (pets);
+            pets.push("cats"); //push is a function inside proto
+            console.log (pets);
+            
+        </script> 
+        
+    </body>
+</html>
