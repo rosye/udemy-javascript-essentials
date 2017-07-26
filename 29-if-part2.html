@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>If statements part 2</h1>
+        
+        <script>   
+            
+            var score=12,
+            players=6;
+            
+            if (score===12 && players===6){
+                
+                console.log ('Statement is true!');
+            }
+            
+            else {
+                console.log ('Statement is false');
+                }
+            
+            /*
+            
+            https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+            
+            === : precedence 10
+            &&  : precedence 6
+            
+            (score===12 && players===6) = score === 12 : true
+                                          players === 6 : true
+            (true && true) = true
+            
+            */
+            
+            if (score===12 && players===6 || score > 20 || players < 5){
+                
+                console.log ('Statement is true!');
+            }
+            
+            else {
+                console.log ('Statement is false');
+                }
+            
+            /* 
+            
+            > < : precedence 11
+            === : precedence 10
+            &&  : precedence 6
+            ||  : precedence 5
+            
+            (score===12 && players===6 || false || false)
+            (true && true || false || false) 
+            (true || false || false) = "true OR false? We always want true"
+            (true || false) = true
+                    
+            */
+            
+            if (score===13 && players===6 || score > 20 || score===12){
+                
+                console.log ('Statement is true!');
+            }
+            
+            else {
+                console.log ('Statement is false');
+                }
+            
+            /* 
+            
+            (score===13 && players===6 || false || score===12)
+            (false && true || false || true)
+            (true || false || true)
+            (true || true) = true
+            
+            */
+            
+            if (score===13 && (players===6 || score > 20 || score===12)) {
+                
+                console.log ('Statement is true!');
+            }
+            
+            else {
+                console.log ('Statement is false');
+                }
+            
+            /* 
+            
+            () : precedence 20
+            
+            (score===13 && (players===6 || false || score===12))
+            (score===13 && (true || false || true))
+            (score===13 && (true || true))
+            (score===13 && true)
+            (false && true) "True AND false = false"
+            
+            */
+            
+        </script> 
+        
+    </body>
+</html>
+
