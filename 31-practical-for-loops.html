@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Essentials</title>
+    </head>
+    <body>
+        <h1>Practical For Loops</h1>
+        
+        <script>   
+            
+            var array = ["Yuki", "Sushi", "Cleo"];     
+
+            for( var i = 0; i < array.length; i++){
+                
+                  console.log( array[i] );               
+            }
+            
+            var obj = {color:"red", width:200, height:300};
+                
+                var array2 = Object.keys (obj);
+            
+                for (var a=0; a<3; a++){
+                    
+                    /*console.log(array2[a]); = prints the object's keys */
+                    
+                    console.log(obj[array2[a]]);
+                }
+           
+        </script> 
+        
+    </body>
+</html>
+
